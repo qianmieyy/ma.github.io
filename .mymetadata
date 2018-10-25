@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="mianshi"
+  id="myeclipse.1536148618628"
+  context-root="/mianshi"
+  j2ee-spec="5.0"
+  archive="mianshi.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,113 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/307671 (zh-CN, DDL); Windows/6.3.0 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 12pt;
+    }
+  </style>
+</head>
+<body>
+<a name="2065"/>
+
+<div><span>
+  <div>
+<div style="font-size: 16px; display: inline-block; min-width: 100%;position: relative;"><div><div style="font-family:&quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;color:rgb(0, 0, 0);background:url(/Skins/coffee/images/bg_body.gif) left top;line-height:1.5;font-size:14px;"><div style="min-width:auto;"><div style="min-width:auto;text-align:left;"><div style="background:transparent;text-align:left;overflow-x:hidden;"><div style="background:url(/Skins/coffee/images/bg_left.gif) left top repeat-x rgb(254, 254, 242);"><div><div style="text-overflow:ellipsis;overflow:hidden;word-break:break-all;"><div>
+		<h1 style="margin:0px;padding:0px;width:100%;clear:both;font-weight:bold;float:left;line-height:1.5;font-size:14px;padding-left:5px;">
+			<a href="https://www.cnblogs.com/guweiwei/p/6627350.html" style="margin:0px;padding:0px;text-decoration:none;color:rgb(7, 93, 179);">【Java面试题】31  介绍Collection框架的结构</a>
+		</h1>
+		<div style="margin:0px;padding:0px;clear:both;"></div>
+		<div style="margin:0px;padding:5px 2px 5px 5px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin-top:5px;">
+			<div style="margin:0px;padding:0px;margin-bottom:20px;word-break:break-word;"><p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">Collection：List列表，Set集</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">Map：Hashtable，HashMap，TreeMap</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;"> </strong></p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Collection  </strong>是单列集合</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">List</strong><strong style="margin:0px;padding:0px;">   </strong>元素是有序的、可重复</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">有序的 collection，可以对列表中每个元素的插入位置进行精确地控制。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">可以根据元素的整数索引（在列表中的位置）访问元素，并搜索列表中的元素。 </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">可存放重复元素，元素存取是有序的。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">List接口中常用类</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">l <strong style="margin:0px;padding:0px;">Vector</strong>： 线程安全，但速度慢，已被ArrayList替代。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">底层<a href="http://lib.csdn.net/base/datastructure" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);" target="_blank" title="算法与数据结构知识库">数据结构</a>是数组结构</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">l <strong style="margin:0px;padding:0px;">ArrayList</strong>：线程不安全，查询速度快。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">            底层数据结构是数组结构</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">l <strong style="margin:0px;padding:0px;">LinkedList</strong>：线程不安全。增删速度快。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">             底层数据结构是列表结构</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"> </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Set</strong>(集)<strong style="margin:0px;padding:0px;"> </strong>元素无序的、不可重复。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">取出元素的方法只有迭代器。不可以存放重复元素，元素存取是无序的。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">Set接口中常用的类</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">l <strong style="margin:0px;padding:0px;">HashSet</strong>：线程不安全，存取速度快。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">          它是如何保证元素唯一性的呢？依赖的是元素的hashCode方法和euqals方法。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">l <strong style="margin:0px;padding:0px;">TreeSet</strong>：线程不安全，可以对Set集合中的元素进行排序。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">          它的排序是如何进行的呢？通过compareTo或者compare方法中的来保证元素的唯一性。元素是以二叉树的形式存放的。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"> </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"> </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Map  </strong>是一个双列集合</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">|--<strong style="margin:0px;padding:0px;">Hashtable</strong>:线程安全，速度快。底层是哈希表数据结构。是<strong style="margin:0px;padding:0px;">同步</strong>的。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">不允许null作为键，null作为值。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">      |--<strong style="margin:0px;padding:0px;">Properties</strong>:用于配置文件的定义和操作，使用频率非常高，同时键和值都是字符串。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">是集合中可以和IO技术相结合的对象。(到了IO在学习它的特有和io相关的功能。)</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">|--<strong style="margin:0px;padding:0px;">HashMap</strong>:线程不安全，速度慢。底层也是哈希表数据结构。是<strong style="margin:0px;padding:0px;">不同步</strong>的。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">允许null作为键，null作为值。替代了Hashtable.</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">      |--<strong style="margin:0px;padding:0px;">LinkedHashMap</strong>: 可以保证HashMap集合有序。存入的顺序和取出的顺序一致。</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;">|--<strong style="margin:0px;padding:0px;">TreeMap</strong>：可以用来对Map集合中的<strong style="margin:0px;padding:0px;">键</strong>进行排序.</p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"> </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"> </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Collection 和 Collections的区别</strong></p>
+<h3 style="padding:0px;font-size:16px;font-weight:bold;line-height:1.5;margin:10px 0px;"> </h3>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Collection</strong>是集合类的上级接口，子接口主要有Set 和List、Map。 </p>
+<p style="padding:0px;line-height:1.5;color:rgb(0, 0, 0);font-size:13px;margin:10px auto;text-indent:0px;"><strong style="margin:0px;padding:0px;">Collections</strong>是针对集合类的一个帮助类，提供了操作集合的工具方法：一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。</p></div>
+<div style="margin:0px;padding:0px;clear:both;"></div>
+<div style="margin:0px;padding:0px;margin-top:20px;">
+<div style="margin:0px;padding:0px;margin-bottom:10px;">分类: <a href="https://www.cnblogs.com/guweiwei/category/969682.html" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);" target="_blank">Java面试题</a></div>
+<div style="margin:0px;padding:0px;font-size:9pt;color:rgb(102, 102, 102);margin-top:0px;"></div>
+<div style="margin:0px;padding:0px;"><div style="margin:0px;padding:10px 0px;margin-bottom:10px;margin-top:10px;border:1px dashed silver;font-size:12px;width:320px;text-align:center;">
+        <a href="#" style="margin-right:10px;margin:0px;border-radius:10px;padding:3px 8px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-block;vertical-align:middle;box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 3px;text-shadow:rgba(0, 0, 0, 0.25) 0px -1px 1px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAYAAABIdFAMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNo8zjsOxCAMBFB/KEAUFFR0Cbng3nQPw68ArZdAlOZppPFIBhH5EAB8b+Tlt9MYQ6i1BuqFaq1CKSVcxZ2Acs6406KUgpt5/LCKuVgz5BDCSb13ZO99ZOdcZGvt4mJjzMVKqcha68iIePB86GAiOv8CDADlIUQBs7MD3wAAAABJRU5ErkJggg%3D%3D) repeat-x;background-color:rgb(45, 174, 191);color:rgb(255, 255, 255);border:none;">好文要顶</a>
+            <a href="#" style="margin-right:10px;margin:0px;border-radius:10px;padding:3px 8px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-block;vertical-align:middle;box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 3px;text-shadow:rgba(0, 0, 0, 0.25) 0px -1px 1px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAYAAABIdFAMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNo8zjsOxCAMBFB/KEAUFFR0Cbng3nQPw68ArZdAlOZppPFIBhH5EAB8b+Tlt9MYQ6i1BuqFaq1CKSVcxZ2Acs6406KUgpt5/LCKuVgz5BDCSb13ZO99ZOdcZGvt4mJjzMVKqcha68iIePB86GAiOv8CDADlIUQBs7MD3wAAAABJRU5ErkJggg%3D%3D) repeat-x;background-color:rgb(227, 49, 0);color:rgb(255, 255, 255);border:none;">关注我</a>
+    <a href="#" style="margin-right:10px;margin:0px;border-radius:10px;padding:3px 8px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-block;vertical-align:middle;box-shadow:rgba(0, 0, 0, 0.5) 0px 1px 3px;text-shadow:rgba(0, 0, 0, 0.25) 0px -1px 1px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAYAAABIdFAMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHhJREFUeNo8zjsOxCAMBFB/KEAUFFR0Cbng3nQPw68ArZdAlOZppPFIBhH5EAB8b+Tlt9MYQ6i1BuqFaq1CKSVcxZ2Acs6406KUgpt5/LCKuVgz5BDCSb13ZO99ZOdcZGvt4mJjzMVKqcha68iIePB86GAiOv8CDADlIUQBs7MD3wAAAABJRU5ErkJggg%3D%3D) repeat-x;background-color:rgb(255, 181, 21);color:rgb(255, 255, 255);border:none;">收藏该文</a>
+    <a href="#" style="margin-right:10px;margin:0px;border-radius:10px;padding:3px 2px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-block;vertical-align:middle;box-shadow:none;text-shadow:none;background:none;color:rgb(255, 255, 255);border:none;" title="分享至新浪微博"><img src="Collection1_files/icon_weibo_24.png" type="image/png" data-filename="icon_weibo_24.png" height="24" style="margin:0px;padding:0px;height:auto;border:none;vertical-align:middle;margin-left:5px;box-shadow:none;max-width:300px;" width="24"/></a>
+    <a href="#" style="margin-right:10px;margin:0px;border-radius:10px;padding:3px 2px;text-decoration:none;font-weight:bold;cursor:pointer;display:inline-block;vertical-align:middle;box-shadow:none;text-shadow:none;background:none;color:rgb(255, 255, 255);border:none;" title="分享至微信"><img src="Collection1_files/wechat.png" type="image/png" data-filename="wechat.png" height="24" style="margin:0px;padding:0px;border:medium none;width:24px;height:24px;box-shadow:none;margin-left:5px;vertical-align:middle;max-width:300px;" width="24"/></a>
+</div>
+<div style="margin:0px;padding:0px;float:left;width:280px;margin-top:0px;margin-bottom:10px;color:rgb(0, 0, 0);margin-left:0px;font-size:12px;">
+    <div style="margin:0px;padding:0px;float:left;line-height:18px;">
+            <a href="http://home.cnblogs.com/u/guweiwei/" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);" target="_blank"><img src="Collection1_files/20170308205646.png" type="image/jpeg" data-filename="20170308205646.png" height="48" style="margin:0px;padding:0px;height:auto;border:0px;vertical-align:top;float:left;margin-right:5px;padding-top:5px;padding-left:2px;max-width:300px;" width="48"/></a>
+        <div style="margin:0px;padding:0px;float:left;line-height:18px;">
+            <a href="http://home.cnblogs.com/u/guweiwei/" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);">薇薇一笑g</a><br style="margin:0px;padding:0px;"/>
+            <a href="http://home.cnblogs.com/u/guweiwei/followees" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);">关注 - 12</a><br style="margin:0px;padding:0px;"/>
+            <a href="http://home.cnblogs.com/u/guweiwei/followers" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);">粉丝 - 77</a>
+        </div>
+    </div>
+    <div style="margin:0px;padding:0px;clear:both;"></div>
+    <div style="margin:0px;padding:0px;"></div>
+    <div style="margin:0px;padding:0px;">
+                <a href="#" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);">+加关注</a>
+    </div>
+</div>
+<div style="margin:0px;padding:0px;float:right;margin-bottom:10px;margin-right:30px;font-size:12px;width:125px;text-align:center;margin-top:10px;">
+    <div style="margin:0px;padding:0px;float:left;width:46px;height:52px;background:url(//static.cnblogs.com/images/upup.gif) no-repeat;text-align:center;cursor:pointer;margin-top:2px;padding-top:5px;">
+        <span style="margin:0px;padding:0px;font-size:14px;color:rgb(7, 93, 179);font-family:Verdana;line-height:1.5em;">0</span>
+    </div>
+    <div style="text-align:center;padding:0px;margin:0px;height:52px;background:url(//static.cnblogs.com/images/downdown.gif) no-repeat;margin-left:20px;cursor:pointer;margin-top:2px;padding-top:5px;width:46px;float:right;">
+        <span style="margin:0px;padding:0px;font-size:14px;color:rgb(7, 93, 179);font-family:Verdana;line-height:1.5em;">1</span>
+    </div>
+    <div style="margin:0px;padding:0px;clear:both;"></div>
+    <div style="margin:0px;padding:0px;margin-top:5px;margin-left:0px;font-size:12px;color:gray;">
+    </div>
+</div>
+</div>
+<div style="margin:0px;padding:0px;clear:both;"></div>
+<div style="margin:0px;padding:0px;line-height:1.8;font-size:12px;"><a href="https://www.cnblogs.com/guweiwei/p/6626780.html" style="margin:0px;padding:0px;color:rgb(7, 93, 179);text-decoration:none;">« </a> 上一篇：<a href="https://www.cnblogs.com/guweiwei/p/6626780.html" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);" title="发布于2017-03-27 14:59">【Java面试题】30  子线程循环10次，接着主线程循环100，接着又回到子线程循环10次，接着再回到主线程又循环100，如此循环50次，请写出程序。</a><br style="margin:0px;padding:0px;"/><a href="https://www.cnblogs.com/guweiwei/p/6632341.html" style="margin:0px;padding:0px;color:rgb(7, 93, 179);text-decoration:none;">» </a> 下一篇：<a href="https://www.cnblogs.com/guweiwei/p/6632341.html" style="margin:0px;padding:0px;text-decoration:underline;color:rgb(7, 93, 179);" title="发布于2017-03-28 10:17">【Java面试题】32  ArrayList和Vector的区别</a><br style="margin:0px;padding:0px;"/></div>
+</div>
+
+
+		</div>
+		<div style="margin:0px;padding:0px;clear:both;font-size:12px;float:right;width:100%;text-align:right;padding-right:5px;color:rgb(102, 102, 102);margin-top:5px;">posted @ <span style="margin:0px;padding:0px;">2017-03-27 16:23</span> <a href="https://www.cnblogs.com/guweiwei/" style="margin:0px;padding:0px;text-decoration:none;color:rgb(7, 93, 179);">薇薇一笑g</a> 阅读(<span style="margin:0px;padding:0px;">1669</span>) 评论(<span style="margin:0px;padding:0px;">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=6627350" rel="nofollow" style="margin:0px;padding:0px;text-decoration:none;color:rgb(7, 93, 179);">编辑</a> <a href="https://www.cnblogs.com/guweiwei/p/6627350.html#" style="margin:0px;padding:0px;text-decoration:none;color:rgb(7, 93, 179);">收藏</a></div>
+	</div></div></div></div></div></div></div></div></div></div>
+</div>
+</span>
+</div></body></html> 

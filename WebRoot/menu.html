@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+	<link rel="StyleSheet" href="dtree/dtree.css" type="text/css" />
+	<script type="text/javascript" src="dtree/dtree.js"></script>
+</HEAD>
+
+<BODY>
+<div class="dtree">
+
+	<script type="text/javascript">
+		<!--
+
+		d = new dTree('d');
+
+		d.add(0,-1,'java');
+		d.add(1,0,'面试题');
+		d.add(2,1,'面试题1','mian/mian1.html','','abc');
+		d.add(3,1,'面试题2','mian/mian2.html','','abc');
+		d.add(4,1,'面试题3','mian/mian3.html','','abc');
+		d.add(5,1,'面试题4','mian/mian4.html','','abc');
+		
+		
+		
+		d.add(6,0,'javaSE面试题100道');
+		d.add(7,6,'面向对象相关','javaSE/java.html','','abc');
+		d.add(8,6,'java线程','javaSE/Thread.html','','abc');
+		d.add(9,6,'Java集合类','javaSE/Collection.html','','abc');
+		d.add(10,6,'垃圾收集器','javaSE/gc.html','','abc');
+		d.add(11,6,'Java小应用程序(Applet)','javaSE/Applet.html','','abc');
+		d.add(12,6,'Swing','javaSE/Swing.html','','abc');
+		d.add(13,6,'JDBC','javaSE/JDBC.html','','abc');
+		d.add(14,6,'Servlet','javaSE/Servlet.html','','abc');
+		d.add(15,6,'JSP','javaSE/JSP.html','','abc');
+		
+		
+		d.add(16,0,'javaSE面试题及其答案');
+		d.add(17,16,'初识 Java','JAVASE2/Java.html','','abc');
+		d.add(18,16,'数组','JAVASE2/Array.html','','abc');
+		d.add(19,16,'设计模式入门','JAVASE2/design.html','','abc');
+		d.add(20,16,'面向对象','JAVASE2/object.html','','abc');
+		d.add(21,16,'异常处理','JAVASE2/Exception.html','','abc');
+		d.add(22,16,'常用工具类','JAVASE2/int.html','','abc');
+		d.add(23,16,'集合','JAVASE2/Collection.html','','abc');
+		d.add(24,16,'IO 流','JAVASE2/IO.html','','abc');
+		d.add(25,16,'反射技术','JAVASE2/reflect.html','','abc');
+		d.add(26,16,'数据类型和运算符','','','abc');
+		d.add(27,16,'流程控制','','','abc');
+		d.add(28,16,'多线程','','','abc');
+		d.add(29,16,'网络编程','','','abc');
+		
+		
+		d.add(30,0,'java基础知识');
+		d.add(31,30,'String对象相关','java/string.html','','abc');
+		d.add(32,30,'java基础','java/java.html','','abc');
+		d.add(33,30,'【常用类】包装类','java/baozhuang.html','','abc');
+		
+		
+		d.add(34,0,'Web前端');
+		d.add(35,34,'JavaScript','a2/javascript.html','','abc');
+		d.add(36,34,'EL、JSTL','a2/EL-JSTL.html','','abc');
+		d.add(37,34,'JSON','a2/json.html','','abc');
+		d.add(38,34,'jQuery','a2/jQuery.html','','abc');
+		d.add(39,34,'Ajax','a2/Ajax.html','','abc');
+		d.add(40,34,'BOM浏览器对象模型','a2/window.html','','abc');
+		d.add(41,34,'表单验证、正则表达式','a2/yanzheng.html','','abc');
+		
+		
+		d.add(42,0,'json-xml');
+		d.add(43,42,'XML就是这么简单','a3/xml.html','','abc');
+		d.add(44,42,'JSON入门看这一篇就够了','a3/json.html','','abc');
+		d.add(45,42,'XML+JSON面试题都在这里','a3/xml-json.html','','abc');
+		
+		
+		d.add(46,0,'jsp相关');
+		d.add(47,46,'jsp','jsp/JSP.html','','abc');
+		d.add(48,46,'servlet','jsp/servlet.html','','abc');
+		d.add(49,46,'jsp9大内置对象和作用','jsp/9object.html','','abc');
+		d.add(50,46,'Request对象与Response对象','jsp/reqresp.html','','abc');
+		d.add(51,46,'cookie和session的区别','jsp/cookiesession.html','','abc');
+		d.add(52,46,'三层架构和 MVC模式的区别与联系','jsp/mvc.html','','abc');
+		d.add(53,46,'过滤器','jsp/filter.html','','abc');
+		
+		
+		d.add(54,30,'排序');
+		d.add(55,54,'冒泡排序','sort/Bubble.html','','abc');
+		d.add(56,54,'选择排序','sort/Selection.html','','abc');
+		d.add(57,54,'插入排序','sort/Insertion.html','','abc');
+		d.add(58,54,'快速排序','sort/Quicksort.html','','abc');
+		
+		
+		d.add(59,30,'集合-io流');
+		d.add(60,59,'io流','a1/io.html','','abc');
+		d.add(61,59,'集合','a1/collection.html','','abc');
+		
+		
+		d.add(62,0,'数据库');
+		d.add(63,62,'连接池','sql/lianjiechi.html','','abc');
+		d.add(64,62,'事务的四大特性及隔离级别','sql/shiwu.html','','abc');
+		
+		
+		d.add(65,30,'线程');
+		d.add(66,65,'多线程入门','thread/thread.html','','abc');
+		
+		
+		d.add(67,34,'Javascript面向对象入门','a2/Javascript2.html','','abc');
+		d.add(68,34,'DOM编程','a2/dom.html','','abc');
+		d.add(69,34,'Juqery就是这么简单','a2/jQuery2.html','','abc');
+		
+		d.add(70,46,'Tomcat+Servlet面试题都在这里','jsp/tom-ser.html','','abc');
+		
+		d.add(71,62,'数据库面试题','sql/sql.html','','abc');
+		
+		d.add(72,34,'AJAX面试题','a2/Ajax2.html','','abc');
+		
+		d.add(73,0,'JDBC');
+		d.add(74,73,'JDBC常见面试题','jdbc/jdbc.html','','abc');
+		
+		d.add(75,65,'多线程面试题','thread/thread1.html','','abc');
+		
+		d.add(76,1,'面试题5','mian/mian5.html','','abc');
+
+		d.add(77,59,'集合面试题1','a1/Collection1.html','','abc');
+		d.add(78,59,'集合面试题2','a1/Collection2.html','','abc');
+		document.write(d);
+		//-->
+	</script>
+
+</div>
+
+</BODY>
+</HTML>
