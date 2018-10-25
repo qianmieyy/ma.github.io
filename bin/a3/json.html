@@ -1,0 +1,190 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/307671 (zh-CN, DDL); Windows/6.3.0 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="1940"/>
+
+<div><span>
+  <div>
+<div style="font-size: 16px; display: inline-block; min-width: 100%;position: relative;"><div style="box-sizing:border-box;font-family:sans-serif;text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent;"><div style="box-sizing:border-box;font-family:-apple-system, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Microsoft Yahei&quot;, sans-serif;font-size:14px;line-height:1.42858;color:rgb(51, 51, 51);background-color:rgb(255, 255, 255);-webkit-font-smoothing:antialiased;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;line-height:1.6;word-wrap:break-word;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;"><span style="line-height:1.6;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;"> </span>
+                    
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;margin-top:0px;">什么是JSON</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">JSON：<strong style="box-sizing:border-box;font-weight:bold;">JavaScript Object Notation</strong> 【JavaScript 对象表示法】</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">JSON 是存储和交换文本信息的语法。类似 XML。</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">JSON采用完全独立于任何程序语言的文本格式，使JSON成为理想的数据交换语言S</strong></p>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">为什么需要JSON</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">提到JSON，我们就应该和XML来进行对比。XML也是一种存储和交换文本信息的手段。那么JSON好在哪里呢？？</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">JSON 比 XML 更小、更快，更易解析</strong>。</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">javaScript原生支持JSON，解析速度会很快</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">XML解析成DOM对象的时候，浏览器【IE和fireFox】会有差异</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">使用JSON会更简单</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="json_files/1460000013279259" type="image/jpeg" data-filename="1460000013279259" height="439" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="800"/></span></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">更加容易创建JavaScript对象</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> p = {<span style="box-sizing:border-box;color:rgb(221, 17, 68);">'city'</span>:[<span style="box-sizing:border-box;color:rgb(221, 17, 68);">'北京'</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">'上海'</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">'广州'</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">'深圳'</span>]};
+<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">for</span>(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> i=<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>;i&lt;p.city.length;i++){
+    <span style="box-sizing:border-box;color:rgb(0, 134, 179);">document</span>.write(p.city[i]+<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;&lt;br/&gt;&quot;</span>);
+}</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">JSON语法</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">客户端与服务端的交互数据无非就是两种</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">数组</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">对象</strong></li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">于是乎，JSON所表示的数据要么就是对象，要么就是数据</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">JSON语法是javaScript语法的子集，<strong style="box-sizing:border-box;font-weight:bold;">javaScript用[]中括号来表示数组，用{}大括号来表示对象，JSON亦是如此</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">JSON数组：</h2>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:1.5em;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> employees = [
+    { <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;firstName&quot;</span>:<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Bill&quot;</span> , <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;lastName&quot;</span>:<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Gates&quot;</span> },
+    { <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;firstName&quot;</span>:<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;George&quot;</span> , <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;lastName&quot;</span>:<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Bush&quot;</span> },
+    { <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;firstName&quot;</span>:<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Thomas&quot;</span> , <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;lastName&quot;</span>: <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Carter&quot;</span> }
+    ];
+</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">JSON对象</h2>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:1.5em;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> obj = {
+
+            <span style="box-sizing:border-box;">age</span>: <span style="box-sizing:border-box;color:rgb(0, 128, 128);">20</span>,
+            <span style="box-sizing:border-box;">str</span>: <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;zhongfucheng&quot;</span>,
+            <span style="box-sizing:border-box;">method</span>: <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">function</span> (<span style="box-sizing:border-box;"></span>) </span>{
+                alert(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;我爱学习&quot;</span>);
+            }
+
+        };</code></pre>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">当然啦，数组可以包含对象，在对象中也可以包含数组</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">解析JSON</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">javaScript原生支持JSON的，<strong style="box-sizing:border-box;font-weight:bold;">我们可以使用eval()函数来解析JSON，把JSON文本数据转换成一个JavaScript对象。</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">function</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">test</span>(<span style="box-sizing:border-box;"></span>) </span>{
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//在写JOSN的时候，记得把带上逗号</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> txt = <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;{a:123,&quot;</span> +
+                    <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;b:'zhongfucheng'}&quot;</span>;
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//使用eval解析JSON字符串，需要增添()</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> aa = <span style="box-sizing:border-box;color:rgb(0, 134, 179);">eval</span>(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;(&quot;</span> + txt + <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;)&quot;</span>);
+            alert(aa);
+
+        }
+
+</code></pre>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">效果</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="json_files/1460000013279260" type="image/png" data-filename="1460000013279260" height="165" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="283"/></span></p>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">不用框架时将JavaBean转成JSON</h1>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">使用Strus2的时候，Struts2自带了组件能够让JavaBean对象、集合转成是JSON，不用我们自己拼接...这是非常方便的。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">使用SpringMVC的时候，SpringMVC也支持将JavaBean转成JSON</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">但是，我们不一定使用框架来做开发呀。因此，我们还得<strong style="box-sizing:border-box;font-weight:bold;">学习使用第三方库来将JavaBean对象、集合转成JSON</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">导入开发包</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">commons-io-2.0.1.jar</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">commons-lang-2.5.jar</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">commons-collections-3.1.jar</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">commons-beanutils-1.7.0.jar</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">ezmorph-1.0.3.jar</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">json-lib-2.1-jdk15.jar</li>
+</ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">事例代码</h2>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:1.5em;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">package</span> cn.itcast.javaee.js.bean2json;
+
+<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">import</span> net.sf.json.JSONArray;
+
+<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">import</span> java.util.*;
+
+<span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">/**
+ * 使用第三方工具，将JavaBean对象/List或Set或Map对象转成JSON 
+ * <span style="box-sizing:border-box;color:rgb(221, 17, 68);">@author</span> AdminTC
+ */</span>
+<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">class</span> <span style="box-sizing:border-box;color:rgb(68, 85, 136);font-weight:bold;">TestBean2Json</span> </span>{
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">javabean2json</span><span style="box-sizing:border-box;">()</span> </span>{
+        City city = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广州&quot;</span>);
+        JSONArray jSONArray = JSONArray.fromObject(city);
+        String jsonJAVA = jSONArray.toString();
+        System.out.println(jsonJAVA);
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//[{&quot;id&quot;:1,&quot;name&quot;:&quot;广州&quot;}]</span>
+    }
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">list2json</span><span style="box-sizing:border-box;">()</span> </span>{
+        List&lt;City&gt; cityList = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> ArrayList&lt;City&gt;();
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广州&quot;</span>));
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">2</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;珠海&quot;</span>));
+        JSONArray jSONArray = JSONArray.fromObject(cityList);
+        String jsonJAVA = jSONArray.toString();
+        System.out.println(jsonJAVA);
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//[{&quot;id&quot;:1,&quot;name&quot;:&quot;广州&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;珠海&quot;}]</span>
+    }
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">set2json</span><span style="box-sizing:border-box;">()</span> </span>{
+        Set&lt;City&gt; citySet = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> LinkedHashSet&lt;City&gt;();
+        citySet.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广州&quot;</span>));
+        citySet.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">2</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;珠海&quot;</span>));
+        JSONArray jSONArray = JSONArray.fromObject(citySet);
+        String jsonJAVA = jSONArray.toString();
+        System.out.println(jsonJAVA);
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//[{&quot;id&quot;:1,&quot;name&quot;:&quot;广州&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;珠海&quot;}]</span>
+    }
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">javabeanlist2json</span><span style="box-sizing:border-box;">()</span> </span>{
+        List&lt;City&gt; cityList = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> ArrayList&lt;City&gt;();
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;中山&quot;</span>));
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">2</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;佛山&quot;</span>));
+        Province province = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> Province(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广东&quot;</span>,cityList);
+        
+        JSONArray jSONArray = JSONArray.fromObject(province);
+        String jsonJAVA = jSONArray.toString();
+        System.out.println(jsonJAVA);
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">/*
+          [
+             {
+              &quot;id&quot;:1,
+              &quot;name&quot;:&quot;广东&quot;
+              &quot;cityList&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;中山&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;佛山&quot;}],
+             }
+          ]
+          */</span>
+    }
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">map2json</span><span style="box-sizing:border-box;">()</span> </span>{
+        
+        List&lt;City&gt; cityList = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> ArrayList&lt;City&gt;();
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;中山&quot;</span>));
+        cityList.add(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> City(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">2</span>,<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;佛山&quot;</span>));
+        
+        Map&lt;String,Object&gt; map = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> LinkedHashMap&lt;String,Object&gt;();
+        map.put(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;total&quot;</span>,cityList.size());<span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//表示集合的长度</span>
+        map.put(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;rows&quot;</span>,cityList);<span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//rows表示集合</span>
+        
+        JSONArray jSONArray = JSONArray.fromObject(map);
+        String jsonJAVA = jSONArray.toString();
+        System.out.println(jsonJAVA);
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//[{&quot;total&quot;:2,&quot;rows&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;中山&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;佛山&quot;}]}]</span>
+        
+        jsonJAVA = jsonJAVA.substring(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>,jsonJAVA.length()-<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>);
+        System.out.println(jsonJAVA);
+    }
+    
+}
+</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">把要解析成JSON 的javaBena对象、集合放进下面这段代码即可！</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:initial;background:none;overflow-wrap:normal;word-break:break-word;">        JSONArray jSONArray = JSONArray.fromObject(map);</code></pre>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">无论放进去什么，返回的都是数组</strong></p>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">总结</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="json_files/1460000013279261" type="image/jpeg" data-filename="1460000013279261" height="439" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="800"/></span></p>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>如果文章有错的地方欢迎指正，大家互相交流。习惯在微信看技术文章的同学，可以关注微信公众号:Java3y<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+
+                <span style="line-height:1.6;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;clear:both;"> </span></div></div></div></div></div></div></div></div>
+</div>
+</span>
+</div></body></html> 

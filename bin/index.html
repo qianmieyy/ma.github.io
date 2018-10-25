@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>JAVA面试题</title>
+		<style type="text/css">
+a {
+	text-decoration: none;
+}
+
+table {
+	border: 1px solid #E1E1E1;
+	border-collapse: collapse;
+}
+#left{
+		margin-top:30px;
+		/*绝对定位*/
+		position:absolute;
+		/*居左*/
+		right:200px;
+	}
+</style>
+<script type="text/javascript">
+	var h=100;
+	//设置滚动条事件，匿名函数来实现这个事件下，要做的事情。
+	//document.body.scrollTop，滚动条移动的距离
+	//marginTop，上边距
+	window.onscroll=function(){
+		//alert('a');
+		document.getElementById("left").style.marginTop=h+document.body.scrollTop;
+		//alert(document.body.scrollTop);
+	}
+	function f(){
+		//关键点，样式的获得
+		//找到元素，设置其样式style的display属性值为none。
+		document.getElementById("left").style.display='none';
+	}
+</script>
+	</head>
+	<body>
+	<div id="left" style="">
+				<a href="#" onclick="history.go(-1)">返回</a>
+				</div>
+		<table width="100%" height="100%" border="1">
+			<tr>
+				<td colspan="2" height="50" align="center">
+				
+				</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top" width="200">
+					<iframe src="menu.html" width="100%" height="100%"></iframe>
+				</td>
+				<td>
+					<iframe src="welcome.html" width="100%" height="100%" name="abc"></iframe>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

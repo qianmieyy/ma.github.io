@@ -1,0 +1,904 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/307671 (zh-CN, DDL); Windows/6.3.0 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="1969"/>
+
+<div><span>
+  <div>
+<div style="font-size: 16px; display: inline-block; min-width: 100%;position: relative;"><div style="box-sizing:border-box;font-family:sans-serif;text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent;"><div style="box-sizing:border-box;font-family:-apple-system, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Microsoft Yahei&quot;, sans-serif;font-size:14px;line-height:1.42858;color:rgb(51, 51, 51);background-color:rgb(255, 255, 255);-webkit-font-smoothing:antialiased;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;line-height:1.8;word-wrap:break-word;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;"><span style="line-height:1.8;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;"> </span>
+                    
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;margin-top:0px;">什么是XML？</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML:extensiable markup language 被称作可扩展标记语言</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML简单的历史介绍：</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">gml-&gt;sgml-&gt;html-&gt;xml</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">gml(通用标记语言)–在不同的机器进行通信的数据规范</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">sgml(标准通用标记语言)</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">html(超文本标记语言)</strong></li>
+</ul>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">为什么我们需要使用XML呢？</h1>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">①我们没有XML这种语言之前，我们使用的是String作为两个程序之间的通讯！现在问题就来了，如果我们传输的是带有关系型结构的数据，String怎么表达呢？String对关系型数据不擅长，要是描述起来也难免会有歧义的时候！关系型数据如图下所示:</strong></li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="xml_files/1460000013252689" type="image/png" data-filename="1460000013252689" height="390" style="box-sizing:border-box;vertical-align:middle;border:none;max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="" width="447"/></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;">②<strong style="box-sizing:border-box;font-weight:bold;">HTML语言本身就有缺陷</strong>：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">标记都是固定的，不能自定义。HTML语言中有什么标记就只能用什么标记 </strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">HTML标签本身就缺少含义（tr标签里面什么内容都能放进去，不规范！!）</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">HTML没有实现真正的国际化</strong></li>
+</ul>
+</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML文件就解决了以上的问题了，如果使用XML描述上述图片的关系，是非常简单的！</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml version=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.0&quot;</span> encoding=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span> <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">中国</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">北京</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">海淀</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">海淀</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">丰台</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">丰台</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">北京</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">湖南</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">长沙</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">长沙</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">岳阳</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">岳阳</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">湖南</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">湖北</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">武汉</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">武汉</span>&gt;</span>
+            <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">荆州</span>&gt;</span><span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">荆州</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">湖北</span>&gt;</span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">中国</span>&gt;</span>
+
+</code></pre>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML文件还能使用浏览器打开：</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="xml_files/1460000013252690" type="image/png" data-filename="1460000013252690" height="435" style="box-sizing:border-box;vertical-align:middle;border:none;max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="" width="800"/></span></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">我们可以发现XML是可以描述很复杂的数据关系的</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XML的用途</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">①：<strong style="box-sizing:border-box;font-weight:bold;">配置文件(例子：Tomcat的web.xml,server.xml......)，XML能够非常清晰描述出程序之间的关系</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">②：<strong style="box-sizing:border-box;font-weight:bold;">程序间数据的传输，XML的格式是通用的，能够减少交换数据时的复杂性！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">③：<strong style="box-sizing:border-box;font-weight:bold;">充当小型数据库，如果我们的数据有时候需要人工配置的，那么XML充当小型的数据库是个不错的选择，程序直接读取XML文件显然要比读取数据库要快呢！</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XML的技术架构</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML被设计为“什么都不做”，XML数据或XML文档只用于组织、存储数据，除此之外的数据生成、读取、传送、存取等等操作都与XML本身无关！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">于是乎，想要操作XML，就需要用到XML之外的技术了</strong>：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">为XML定规则：现在一般使用DTD或Schema技术，当然了Schema技术更为先进！</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">解析XML的数据：一般使用DOM或者SAX技术，各有各的优点</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">提供样式：XML一般用来存储数据的，但设计者野心很大，也想用来显示数据(但没人用XML来显示数据)，就有了XSLT(eXtensiable Stylesheet  Language Transformation)可扩展样式转换语言</strong></li>
+</ul>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XML语法：</h1>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">文档声明：</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML声明放在XML的第一行</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">version----版本</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">encoding--编码</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">standalone--独立使用--默认是no。standalone表示该xml是不是独立的，如果是yes，则表示这个XML文档时独立的，不能引用外部的DTD规范文件；如果是no，则该XML文档不是独立的，表示可以引用外部的DTD规范文档。</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">正确的文档声明格式，属性的位置不能改变！</strong></li>
+</ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml version=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.0&quot;</span> encoding=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;utf-8&quot;</span> standalone=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;no&quot;</span><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">元素</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">首先在这里说明一个概念：<strong style="box-sizing:border-box;font-weight:bold;">在XML中元素和标签指的是同一个东西！不要被不同的名称所迷惑了！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">元素中需要值得注意的地方</strong>：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML元素中的出现的空格和换行都会被当做元素内容进行处理</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">每个XML文档必须有且只有一个根元素</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">元素必须闭合</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">大小写敏感</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">不能交叉嵌套</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">不能以数字开头</strong></li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">看起来好像有很多需要值得注意的地方，其实只需要记住：<strong style="box-sizing:border-box;font-weight:bold;">XML的语法是规范的！不要随意乱写！</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">属性</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">属性是作为XML元素中的一部分的，命名规范也是和XML元素一样的！</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">&lt;!--属性名是name，属性值是china--&gt;</span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">中国</span> <span style="box-sizing:border-box;color:rgb(0, 128, 128);">name</span>=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;china&quot;</span>&gt;</span>
+
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">中国</span>&gt;</span>
+
+</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">注释</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">注释和HTML的注释是一样的</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">&lt;!----&gt;</span>
+</code></pre>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">CDATA</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">在编写XML文件时，有些内容可能不想让解析引擎解析执行，而是当作原始内容处理。遇到此种情况，可以把这些内容放在CDATA区里，对于CDATA区域内的内容，XML解析程序不会处理，而是直接原封不动的输出</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">语法：</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">    
+    &lt;![CDATA[
+        ...内容
+    ]]&gt;
+</code></pre>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">转义字符</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">对于一些单个字符，若想显示其原始样式，也可以使用转义的形式予以处理。</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="xml_files/1460000013252691" type="image/png" data-filename="1460000013252691" height="484" style="box-sizing:border-box;vertical-align:middle;border:none;max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="" width="512"/></span></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">处理指令</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">处理指令，简称PI （processing instruction）。处理指令用来指挥解析引擎如何解析XML文档内容。</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">例如：</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">在XML文档中可以使用xml-stylesheet指令，通知XML解析引擎，应用css文件显示xml文档内容。</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml-stylesheet type=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;text/css&quot;</span> href=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.css&quot;</span><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML代码：</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml version=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.0&quot;</span> encoding=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span> <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml-stylesheet type=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;text/css&quot;</span> href=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.css&quot;</span><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+    
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">china</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">guangzhou</span>&gt;</span>
+            广州
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">guangzhou</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shenzhen</span>&gt;</span>
+            深圳
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shenzhen</span>&gt;</span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">china</span>&gt;</span>
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">CSS代码：</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">    
+    
+    guangzhou{
+        font-size: 40px;
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="xml_files/1460000013252692" type="image/png" data-filename="1460000013252692" height="265" style="box-sizing:border-box;vertical-align:middle;border:none;max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="" width="800"/></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">JDK中的XML API</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">①：JAXP（The Java API For XML Processing)：主要负责解析XML</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">②：JAXB（Java Architecture for XML Binding):主要负责将XML映射为Java对象</strong></p>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">什么是XML解析</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">前面XML章节已经说了，XML被设计为“什么都不做”，XML只用于组织、存储数据，除此之外的数据生成、读取、传送等等的操作都与XML本身无关！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML解析就是读取XML的数据！</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XML解析方式</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">XML解析方式分为两种：</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">①：dom(Document Object Model)文档对象模型，是W3C组织推荐解析XML的一种方式</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">②：sax(Simple API For XML)，它是XML社区的标准，几乎所有XML解析器都支持它！</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XML解析操作</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="xml_files/1460000013252693" type="image/png" data-filename="1460000013252693" height="228" style="box-sizing:border-box;vertical-align:middle;border:none;max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="" width="800"/></span></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">从上面的图很容易发现，<strong style="box-sizing:border-box;font-weight:bold;">应用程序不是直接对XML文档进行操作的，而是由XML解析器对XML文档进行分析，然后应用程序通过XML解析器所提供的DOM接口或者SAX接口对分析结果进行操作，从而间接地实现了对XML文档的访问！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">常用的解析器和解析开发包的关系如下所示</strong>：</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">为什么有3种开发包？</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">jaxp开发包是JDK自带的，不需要导入开发包。</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">由于sun公司的jaxp不够完善，于是就被研发了Jdom。XML解析如果使用Jdom，需要导入开发包</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">dom4j是由于Jdom的开发人员出现了分歧，dom4j由Jdom的一批开发人员所研发。XML解析如果使用Jdom，需要导入开发包【现在用dom4j是最多的！】</strong></li>
+</ul>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">jaxp</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;">虽然jaxp解析XML的性能以及开发的简易度是没有dom4j好，但是<strong style="box-sizing:border-box;font-weight:bold;">jaxp不管怎么说都是JDK内置的开发包，我们是需要学习的</strong>！</p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">DOM解析操作</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>DOM解析是一个基于对象的API，它把XML的内容加载到内存中，生成与XML文档内容对应的模型！当解析完成，内存中会生成与XML文档的结构与之对应的DOM对象树，这样就能够根据树的结构，以节点的形式对文档进行操作！<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;">简单来说：<strong style="box-sizing:border-box;font-weight:bold;">DOM解析会把XML文档加载到内存中，生成DOM树的元素都是以对象的形式存在的！我们操作这些对象就能够操作XML文档了！</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">下面这样图就能很好地说明了，<strong style="box-sizing:border-box;font-weight:bold;">是怎么样生成与XML文档内容对应的DOM树！</strong>
+</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">既然XML文档的数据是带有关系型的，那么生成的DOM树的节点也是有关系的：</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">位于一个节点之上的节点是该节点的父节点(parent)</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">一个节点之下的节点是该节点的子节点（children）</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">同一层次，具有相同父节点的节点是兄弟节点（sibling）</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">一个节点的下一个层次的节点集合是节点后代(descendant)</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">父、祖父节点及所有位于节点上面的，都是节点的祖先(ancestor)</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">在DOM解析中有几个核心的操作接口：</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">Document【代表整个XML文档，通过Document节点可以访问XML文件中所有的元素内容！】</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">Node【Node节点几乎在XML操作接口中几乎相当于普通Java类的Object，很多核心接口都实现了它，在下面的关系图可以看出！】</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">NodeList【代表着一个节点的集合，通常是一个节点中子节点的集合！】</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">NameNodeMap【表示一组节点和其唯一名称对应的一一对应关系，主要用于属性节点的表示（书上说是核心的操作接口，但我好像没用到！呃呃呃，等我用到了，我再来填坑！）】</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">节点之间的关系图：</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">有人可能会很难理解，<strong style="box-sizing:border-box;font-weight:bold;">为什么Document接口比Node接口还小，呃呃呃，我是这样想的：一个Document由无数个Node组成，这样我也能把Document当成是Node呀</strong>！如果实在想不通：人家都这样设计了，你有种就不用啊！！(开玩笑的.....)</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">好的，不跟你们多bb，我们来使用一下Dom的方式解析XML文档吧！</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XML文档代码</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml version=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.0&quot;</span> encoding=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span> <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">china</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">guangzhou</span> &gt;</span>广州<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">guangzhou</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shenzhen</span>&gt;</span>深圳<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shenzhen</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">beijing</span>&gt;</span>北京<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">beijing</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shanghai</span>&gt;</span>上海<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">shanghai</span>&gt;</span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">china</span>&gt;</span>
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">根据XML解析的流程图，<strong style="box-sizing:border-box;font-weight:bold;">我们先要获取到解析器对象！</strong>
+</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">class</span> <span style="box-sizing:border-box;color:rgb(68, 85, 136);font-weight:bold;">DomParse</span> </span>{
+    
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">main</span><span style="box-sizing:border-box;">(String[] args)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> ParserConfigurationException, IOException, SAXException </span>{
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//API规范：需要用一个工厂来造解析器对象，于是我先造了一个工厂！</span>
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取解析器对象</span>
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析XML文档的流对象</span>
+            InputStream inputStream = DomParse.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>);
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//解析XML文档，得到了代表XML文档的Document对象！</span>
+            Document document = documentBuilder.parse(inputStream);
+            
+        }
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">解析XML文档的内容用来干嘛？无非就是增删改查遍历，<strong style="box-sizing:border-box;font-weight:bold;">只要我们会对XML进行增删改查，那就说明我们是会使用DOM解析的</strong>！</li></ul>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">遍历</h3>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">我们再来看一下XML文档的内容，如果我们要遍历该怎么做？</strong>：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;"><strong style="box-sizing:border-box;font-weight:bold;">可能我们会有两种想法</strong>：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">①：从XML文档内容的上往下看，看到什么就输出什么！【这正是SAX解析的做法】</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">②：把XML文档的内容分成两部分，一部分是有子节点的，一部分是没有子节点的（也就是元素节点！）。首先我们判断是否为元素节点，如果是元素节点就输出，不是元素节点就获取到子节点的集合，再判断子节点集合中的是否是元素节点，如果是元素节点就输出，如果不是元素节点获取到该子节点的集合....好的，一不小心就递归了...</strong></li>
+</ul>
+</li></ul>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">我们来对XML文档遍历一下吧，为了更好地重用，就将它写成一个方法吧（也是能够更好地用递归实现功能）</strong>！</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">class</span> <span style="box-sizing:border-box;color:rgb(68, 85, 136);font-weight:bold;">DomParse</span> </span>{
+    
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">main</span><span style="box-sizing:border-box;">(String[] args)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> ParserConfigurationException, IOException, SAXException </span>{
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//API规范：需要用一个工厂来造解析器对象，于是我先造了一个工厂！</span>
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取解析器对象</span>
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析XML文档的File对象</span>
+            InputStream inputStream = DomParse.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>);
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//解析XML文档，得到了代表XML文档的Document对象！</span>
+            Document document = documentBuilder.parse(inputStream);
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把代表XML文档的document对象传递进去给list方法</span>
+            list(document);
+    
+        }
+    
+    
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//我们这里就接收Node类型的实例对象吧！多态！！！</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">list</span><span style="box-sizing:border-box;">(Node node)</span> </span>{
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//判断是否是元素节点，如果是元素节点就直接输出</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span> (node.getNodeType() == Node.ELEMENT_NODE) {
+                System.out.println(node.getNodeName());
+            }
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//....如果没有进入if语句，下面的肯定就不是元素节点了，所以获取到子节点集合</span>
+            NodeList nodeList = node.getChildNodes();
+    
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//遍历子节点集合</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">for</span> (<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> i = <span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>; i &lt; nodeList.getLength(); i++) {
+    
+                <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到其中的一个子节点</span>
+                Node child = nodeList.item(i);
+    
+                <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//...判断该子节点是否为元素节点，如果是元素节点就输出，不是元素节点就再获取到它的子节点集合...递归了</span>
+    
+                list(child);
+            }
+            
+        }
+    }
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">查询</h3>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">现在我要做的就是：读取guangzhou这个节点的文本内容！</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">read</span><span style="box-sizing:border-box;">(Document document)</span> </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到所有名称为guangzhou节点</span>
+        NodeList nodeList = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span>);
+        
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//取出第一个名称为guangzhou的节点</span>
+        Node node = nodeList.item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+        
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到节点的文本内容</span>
+        String value = node.getTextContent();
+
+        System.out.println(value);
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">增加</h3>
+<p style="box-sizing:border-box;margin:1.5em 0px;">现在我想多增加一个城市节点(杭州)，我需要这样做：</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">add</span><span style="box-sizing:border-box;">(Document document)</span> </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建需要增加的节点</span>
+        Element element = document.createElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;hangzhou&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//向节点添加文本内容</span>
+        element.setTextContent(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;杭州&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到需要添加节点的父节点</span>
+        Node parent = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;china&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把需要增加的节点挂在父节点下面去</span>
+        parent.appendChild(element);
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">做到这里，我仅仅在内存的Dom树下添加了一个节点，要想把内存中的Dom树写到硬盘文件中，需要转换器</strong>！</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">获取转换器也十分简单</strong>：</li>
+</ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取一个转换器它需要工厂来造，那么我就造一个工厂</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取转换器对象</span>
+        Transformer transformer = transformerFactory.newTransformer();
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">把内存中的Dom树更新到硬盘文件中的transform()方法就稍稍有些复杂了</strong>！</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">它需要一个Source实例对象和Result的实例对象，这两个接口到底是什么玩意啊？</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">于是乎，<strong style="box-sizing:border-box;font-weight:bold;">我就去查API，发现DomSource实现了Source接口，我们使用的不正是Dom解析吗，再看看构造方法，感觉就是它了！</strong>
+</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">而SteamResult实现了Result接口，有人也会想，DomResult也实现了Result接口啊，为什么不用DomResult呢？我们现在做的是把内存中的Dom树更新到硬盘文件中呀，当然用的是StreamResult啦！</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">完整代码如下：</li>
+</ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">add</span><span style="box-sizing:border-box;">(Document document)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> TransformerException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建需要增加的节点</span>
+        Element element = document.createElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;hangzhou&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//向节点添加文本内容</span>
+        element.setTextContent(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;杭州&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到需要添加节点的父节点</span>
+        Node parent = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;china&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把需要增加的节点挂在父节点下面去</span>
+        parent.appendChild(element);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取一个转换器它需要工厂来造，那么我就造一个工厂</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取转换器对象</span>
+        Transformer transformer = transformerFactory.newTransformer();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把内存中的Dom树更新到硬盘中</span>
+        transformer.transform(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> DOMSource(document),<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> StreamResult(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>));
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<p style="box-sizing:border-box;margin:1.5em 0px;">刚刚增加的节点是在china节点的末尾处的，现在我<strong style="box-sizing:border-box;font-weight:bold;">想指定增加节点的在beijing节点之前</strong>，是这样做的：</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">add2</span><span style="box-sizing:border-box;">(Document document)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> TransformerException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到beijing节点</span>
+        Node beijing = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;beijing&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建新的节点</span>
+        Element element = document.createElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangxi&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//设置节点的文本内容</span>
+        element.setTextContent(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广西&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到要创建节点的父节点，</span>
+        Node parent = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;china&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//将guangxi节点插入到beijing节点之前！</span>
+        parent.insertBefore(element, beijing);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//将内存中的Dom树更新到硬盘文件中</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.transform(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> DOMSource(document), <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> StreamResult(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>));
+        
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">删除</h3>
+<p style="box-sizing:border-box;margin:1.5em 0px;">现在我要删除的是beijing这个节点！</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">delete</span><span style="box-sizing:border-box;">(Document document)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> TransformerException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到beijing这个节点</span>
+        Node node = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;beijing&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到父节点，然后通过父节点把自己删除了</span>
+        node.getParentNode().removeChild(node);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把内存中的Dom树更新到硬盘文件中</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.transform(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> DOMSource(document), <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> StreamResult(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>));
+
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">修改</h3>
+<p style="box-sizing:border-box;margin:1.5em 0px;">将guangzhou节点的文本内容修改成广州你好</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">update</span><span style="box-sizing:border-box;">(Document document)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> TransformerException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到guangzhou节点</span>
+        Node node = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        node.setTextContent(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;广州你好&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//将内存中的Dom树更新到硬盘文件中</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.transform(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> DOMSource(document), <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> StreamResult(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>));
+
+
+    }
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;">操作属性</h3>
+<p style="box-sizing:border-box;margin:1.5em 0px;">XML文档是可能带有属性值的，现在我们要guangzhou节点上的属性</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">private</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">updateAttribute</span><span style="box-sizing:border-box;">(Document document)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> TransformerException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到guangzhou节点</span>
+        Node node = document.getElementsByTagName(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span>).item(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">0</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//现在node节点没有增加属性的方法，所以我就要找它的子类---Element</span>
+        Element guangzhou = (Element) node;
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//设置一个属性，如果存在则修改，不存在则创建！</span>
+        guangzhou.setAttribute(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;play&quot;</span>, <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;gzchanglong&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//如果要删除属性就用removeAttribute()方法</span>
+
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//将内存中的Dom树更新到硬盘文件中</span>
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.transform(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> DOMSource(document), <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> StreamResult(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>));
+
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">SAX解析</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>SAX采用的是一种顺序的模式进行访问，是一种快速读取XML数据的方式。当时候SAX解析器进行操作时，会触发一系列事件SAX。采用事件处理的方式解析XML文件，利用 SAX 解析 XML 文档，涉及两个部分：<strong style="box-sizing:border-box;font-weight:bold;">解析器和事件处理器</strong>
+<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">sax是一种推式的机制,你创建一个sax 解析器,解析器在发现xml文档中的内容时就告诉你(把事件推给你). 如何处理这些内容，由程序员自己决定。</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">当解析器解析到<code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:2px 4px;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);border-radius:4px;font-size:0.93em;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</code>声明头时，会触发事件。解析到<code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:2px 4px;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);border-radius:4px;font-size:0.93em;">&lt;china&gt;</code>元素头时也会触发事件！也就是说：<strong style="box-sizing:border-box;font-weight:bold;">当使用SAX解析器扫描XML文档(也就是Document对象)开始、结束，以及元素的开始、结束时都会触发事件，根据不同事件调用相对应的方法!</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<p style="box-sizing:border-box;margin:1.5em 0px;">首先我们还是<strong style="box-sizing:border-box;font-weight:bold;">先拿到SAX的解析器再说</strong>吧!</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//要得到解析器对象就需要造一个工厂，于是我造了一个工厂</span>
+        SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+        
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析器对象</span>
+        SAXParser saxParse = saxParserFactory.newSAXParser();
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">调用解析对象的解析方法的时候，需要的不仅仅是XML文档的路径！还需要一个事件处理器！</strong></li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">事件处理器都是由我们程序员来编写的，它一般继承DefaultHandler类，重写如下5个方法：</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">startDocument</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">super</span>.startDocument();
+    }
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">endDocument</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">super</span>.endDocument();
+    }
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">startElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName, Attributes attributes)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">super</span>.startElement(uri, localName, qName, attributes);
+    }
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">endElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">super</span>.endElement(uri, localName, qName);
+    }
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">characters</span><span style="box-sizing:border-box;">(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">char</span>[] ch, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> start, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> length)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">super</span>.characters(ch, start, length);
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">获取解析器，调用解析器解析XML文档的代码：</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">static</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">main</span><span style="box-sizing:border-box;">(String[] args)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> Exception</span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//要得到解析器对象就需要造一个工厂，于是我造了一个工厂</span>
+        SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析器对象</span>
+        SAXParser saxParse = saxParserFactory.newSAXParser();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到XML文档的流对象</span>
+        InputStream inputStream = SAXParse.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;city.xml&quot;</span>);
+
+        saxParse.parse(inputStream, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> MyHandler());
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">事件处理器的代码：</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">class</span> <span style="box-sizing:border-box;color:rgb(68, 85, 136);font-weight:bold;">MyHandler</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">extends</span> <span style="box-sizing:border-box;color:rgb(68, 85, 136);font-weight:bold;">DefaultHandler</span> </span>{
+        <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">startDocument</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+            System.out.println(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;我开始来扫描啦！！！！&quot;</span>);
+        }
+    
+        <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">endDocument</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+    
+            System.out.println(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;我结束了！！！！&quot;</span>);
+        }
+    
+        <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">startElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName, Attributes attributes)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//如果要解析出节点属性的内容，也非常简单，只要通过attributes变量就行了！</span>
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//输出节点的名字！</span>
+            System.out.println(qName);
+        }
+    
+        <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">endElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+    
+            System.out.println(qName);
+        }
+    
+        <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">characters</span><span style="box-sizing:border-box;">(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">char</span>[] ch, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> start, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> length)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+    
+            System.out.println(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> String(ch,start,length));
+        }
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">我们发现，<strong style="box-sizing:border-box;font-weight:bold;">事件处理器的代码都非常简单，然后就如此简单地就能够遍历整个XML文档了！</strong>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">如果要查询单独的某个节点的内容也是非常简单的哟！只要在startElement()方法中判断名字是否相同即可！</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">现在我只想查询guangzhou节点的内容:</li>
+</ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//定义一个标识量，用于指定查询某个节点的内容</span>
+    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">boolean</span> flag = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">false</span>;
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">startElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName, Attributes attributes)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//如果节点名称是guangzhou，我才输出，并且把标识量设置为true</span>
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span> (qName == <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span>) {
+            System.out.println(qName);
+            flag = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">true</span>;
+        }
+    }
+
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">characters</span><span style="box-sizing:border-box;">(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">char</span>[] ch, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> start, <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">int</span> length)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//只有在flag为true的情况下我才输出文本的内容</span>
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span> (flag == <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">true</span>) {
+            System.out.println(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> String(ch, start, length));
+
+        }
+    }
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Override</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">endElement</span><span style="box-sizing:border-box;">(String uri, String localName, String qName)</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> SAXException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//在执行到元素的末尾时，不要忘了将标识量改成false</span>
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span> (qName == <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span> &amp;&amp; flag == <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">true</span>) {
+            System.out.println(qName);
+            flag = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">false</span>;
+
+        }
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">DOM和SAX解析的区别：</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">DOM解析读取整个XML文档，在内存中形成DOM树，很方便地对XML文档的内容进行增删改。但如果XML文档的内容过大，那么就会导致内存溢出！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">SAX解析采用部分读取的方式，可以处理大型文件，但只能对文件按顺序从头到尾解析一遍，不支持文件的增删改操作</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">DOM和SAX解析有着明显的差别，什么时候使用DOM或者SAX就非常明了了。</p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">dom4j</h1>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">Dom4j是一个非常优秀的Java XML API，具有性能优异、功能强大和极易使用的特点。</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">为什么需要有dom4j</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">dom缺点:比较耗费内存</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">sax缺点:只能对xml文件进行读取,不能修改,添加,删除</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">dom4j:既可以提高效率,同时也可以进行crud操作</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">因为dom4j不是sun公司的产品,所以我们开发dom4j需要导入开发包</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">获取dom4j的解析器</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">使用dom4j对XML文档进行增删改查，都需要获取到dom4j的解析器</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析器</span>
+        SAXReader saxReader = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> SAXReader();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到XML文件的流对象</span>
+        InputStream inputStream = DOM4j.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.xml&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//通过解析器读取XML文件</span>
+        Document document = saxReader.read(inputStream);
+        
+</code></pre>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">获取Document对象</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">我们都知道，Document代表的是XML文档，一般我们都是通过Document对象开始，来进行CRUD（增删改查）操作的！</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">获取Document对象有三种方式：</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">①：读取XML文件,获得document对象（这种最常用）</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">SAXReader reader = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> SAXReader()；
+Document document = reader.read(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> File(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;input.xml&quot;</span>));
+</code></pre>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">②：解析XML形式的文本,得到document对象</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">    
+    String text = <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;&lt;members&gt;&lt;/members&gt;&quot;</span>;
+    Document document=DocumentHelper.parseText(text);
+
+</code></pre>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">③：主动创建document对象.</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+Document document =DocumentHelper.createDocument();
+
+<span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建根节点</span>
+Element root = document.addElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;members&quot;</span>);</code></pre>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">CRUD的重要一句话：</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">读取XML文档的数据，都是通过Document获取根元素，再通过根元素获取得到其他节点的，从而进行操作！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">如果XML的结构有多层，需要一层一层地获取！</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">查询</h2>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:1.5em;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Test</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">read</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> DocumentException </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析器</span>
+        SAXReader saxReader = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> SAXReader();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到XML文件的流对象</span>
+        InputStream inputStream = dom4j11.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.xml&quot;</span>);
+   
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//通过解析器读取XML文件</span>
+        Document document = saxReader.read(inputStream);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到根节点</span>
+        Element root = document.getRootElement();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到name节点</span>
+        Element name = root.element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;name&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到了name节点，就可以获取name节点的属性或者文本内容了！</span>
+        String text = name.getText();
+
+        String attribute = name.attributeValue(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;littleName&quot;</span>);
+
+        System.out.println(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;文本内容是：&quot;</span> + text);
+        System.out.println(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;属性内容是：&quot;</span> + attribute);
+        
+    }
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">XML文件如下：</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">&lt;?</span>xml version=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.0&quot;</span> encoding=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span> <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">?&gt;</span></span>
+         <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">person</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">name</span> <span style="box-sizing:border-box;color:rgb(0, 128, 128);">littleName</span>=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;fucheng&quot;</span>&gt;</span>zhongfucheng<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">name</span>&gt;</span>
+        <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">age</span>&gt;</span>20<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">age</span>&gt;</span>
+    <span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">&lt;/<span style="box-sizing:border-box;color:rgb(0, 0, 128);font-weight:normal;">person</span>&gt;</span>
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">多层结构的查询：</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到根节点</span>
+        Element root = document.getRootElement();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//一层一层地获取到节点</span>
+        Element element = root.element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangdong&quot;</span>).element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;guangzhou&quot;</span>).element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;luogang&quot;</span>);
+
+        String value = element.getText();
+
+        System.out.println(value);
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">XML文件和结果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">增加</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">在DOM4j中要对内存中的DOM树写到硬盘文件中，也是要有转换器的支持的！</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">dom4j提供了XMLWriter供我们对XML文档进行更新操作，一般地创建XMLWriter的时候我们都会给出两个参数，一个是Writer，一个是OutputFormat</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">这个OutputFormat有什么用的呢？其实<strong style="box-sizing:border-box;font-weight:bold;">就是指定回写XML的格式和编码格式</strong>。细心的朋友会发现，上面我们在jaxp包下<strong style="box-sizing:border-box;font-weight:bold;">使用dom解析的Transformer类，把内存中的DOM树更新到文件硬盘中，是没有格式的</strong>！不信倒回去看看！<strong style="box-sizing:border-box;font-weight:bold;">这个OutputFormat就可以让我们更新XML文档时也能带有格式</strong>！</p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建带有格式的对象</span>
+        OutputFormat outputFormat = OutputFormat.createPrettyPrint();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//设置编码，默认的编码是gb2312，读写的编码不一致，会导致乱码的！</span>
+        outputFormat.setEncoding(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建XMLWriter对象</span>
+        XMLWriter xmlWriter = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> XMLWriter(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> FileWriter(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;2.xml&quot;</span>), outputFormat);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//XMLWriter对象写入的是document</span>
+        xmlWriter.write(document);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//关闭流</span>
+        xmlWriter.close();
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">下面我们就为<strong style="box-sizing:border-box;font-weight:bold;">在person节点下新创建一个name节点吧,完整的代码如下：</strong>！</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+    <span style="box-sizing:border-box;color:rgb(153, 153, 153);font-weight:bold;">@Test</span>
+    <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">public</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">void</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">add</span><span style="box-sizing:border-box;">()</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">throws</span> Exception </span>{
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到解析器</span>
+        SAXReader saxReader = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> SAXReader();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到XML文件的流对象</span>
+        InputStream inputStream = dom4j11.class.getClassLoader().getResourceAsStream(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;1.xml&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//通过解析器读取XML文件</span>
+        Document document = saxReader.read(inputStream);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建出新的节点，为节点设置文本内容</span>
+        Element newElement = DocumentHelper.createElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;name&quot;</span>);
+        newElement.setText(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;ouzicheng&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取到根元素</span>
+        Element root = document.getRootElement();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把新创建的name节点挂在根节点下面</span>
+        root.add(newElement);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建带有格式的对象</span>
+        OutputFormat outputFormat = OutputFormat.createPrettyPrint();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//设置编码，默认的编码是gb2312，读写的编码不一致，会导致乱码的！</span>
+        outputFormat.setEncoding(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;UTF-8&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建XMLWriter对象</span>
+        XMLWriter xmlWriter = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> XMLWriter(<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> FileWriter(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;2.xml&quot;</span>), outputFormat);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//XMLWriter对象写入的是document</span>
+        xmlWriter.write(document);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//关闭流</span>
+        xmlWriter.close();
+
+
+    }
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">效果如下，是有格式的</strong>！</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">在指定的位置增加节点！现在我想的就是在age属性前面添加节点！</strong></p>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建一个新节点</span>
+        Element element = DocumentHelper.createElement(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;name&quot;</span>);
+        element.setText(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;ouzciheng&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到person下所有的节点元素！</span>
+        List list = document.getRootElement().elements();
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//将节点添加到指定的位置上</span>
+        list.add(<span style="box-sizing:border-box;color:rgb(0, 128, 128);">1</span>, element);
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果图：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">修改</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XMLWriter和获取Document对象的代码我就不贴出来了，反正都是一样的了！</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到age元素</span>
+        Element age = document.getRootElement().element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;age&quot;</span>);
+        age.setText(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;9999&quot;</span>);
+
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果如下：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">删除</h2>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XMLWriter和获取Document对象的代码我就不贴出来了，反正都是一样的了！</strong></li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取得到age节点</span>
+        Element age = document.getRootElement().element(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;age&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到age节点的父节点，使用父节点的remove删除age节点！</span>
+        age.getParent().remove(age);
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XPATH</h1>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">什么是XPATH</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>XPath 是一门在 XML 文档中查找信息的语言。XPath 用于在 XML 文档中通过元素和属性进行导航。<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">为什么我们需要用到XPATH</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">上面我们使用dom4j的时候，<strong style="box-sizing:border-box;font-weight:bold;">要获取某个节点，都是通过根节点开始，一层一层地往下寻找，这就有些麻烦了</strong>！</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">如果我们用到了XPATH这门语言，要获取得到XML的节点，就非常地方便了！</p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">快速入门</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">使用XPATH需要导入开发包jaxen-1.1-beta-7，我们来看官方的文档来入门吧。</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">XPATH的文档非常国际化啊，连中文都有</strong></li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">XPATH文档中有非常多的实例，非常好学，对着来看就知道了！</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">我们来用XPATH技术读取XML文件的信息吧，XML文档如下：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">之前，我们是先获取根节点，再获取guangdong节点再获取guangzhou节点，然后才能读取tianhe节点或者luogang节点的，下面我们来看一下<strong style="box-sizing:border-box;font-weight:bold;">使用XPATH可以怎么的便捷</strong>！</li></ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//直接获取到luogang节点</span>
+        org.dom4j.Node node =  document.selectSingleNode(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;//luogang&quot;</span>);
+
+        <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//获取节点的内容</span>
+        String value = node.getText();
+
+        System.out.println(value);
+</code></pre>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;">效果：</li></ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><a href="xml_files/squares.svg"><img src="xml_files/e2ab37db2469925ded20978e7a9cf692.png" alt="squares.svg"></a></span></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">获取什么类型的节点，XPATH的字符串应该怎么匹配，查文档就知道了，这里就不再赘述了。！</strong></p>
+<hr style="border-right-color:initial;box-sizing:content-box;border-width:1px 0px 0px;border-right-style:initial;border-bottom-style:initial;border-left-style:initial;height:0px;border-bottom-color:initial;border-left-color:initial;border-image:initial;margin:1.5em auto;border-top:2px dotted rgb(238, 238, 238);"/>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>如果文章有错的地方欢迎指正，大家互相交流。习惯在微信看技术文章的同学，可以关注微信公众号:Java3y<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+
+                <span style="line-height:1.8;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;clear:both;"> </span></div></div></div></div></div></div></div></div>
+</div>
+</span>
+</div></body></html> 

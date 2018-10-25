@@ -1,0 +1,241 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="Evernote Windows/307671 (zh-CN, DDL); Windows/6.3.0 (Win64);"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="2031"/>
+
+<div><span>
+  <div>
+<div style="font-size: 16px; display: inline-block; min-width: 100%;position: relative;"><div style="box-sizing:border-box;font-family:sans-serif;text-size-adjust:100%;font-size:10px;-webkit-tap-highlight-color:transparent;"><div style="box-sizing:border-box;font-family:-apple-system, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Microsoft Yahei&quot;, sans-serif;font-size:14px;line-height:1.42858;color:rgb(51, 51, 51);background-color:rgb(255, 255, 255);-webkit-font-smoothing:antialiased;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;"><div style="box-sizing:border-box;line-height:1.6;word-wrap:break-word;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;"><span style="line-height:1.6;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;"> </span>
+                    
+<h1 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;font-size:2em;margin:1.5em 0px 0px;line-height:1.75em;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;margin-top:0px;">AJAX常见面试题</h1>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">什么是AJAX，为什么要使用Ajax</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">AJAX是“Asynchronous JavaScript and XML”的缩写。他是指一种<strong style="box-sizing:border-box;font-weight:bold;">创建交互式网页应用的网页开发技术</strong>。、</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">客户端与服务器，可以在【不必刷新整个浏览器】的情况下，与服务器进行异步通讯的技术</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">AJAX应用和传统Web应用有什么不同？</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>AJAX应用和传统Web应用有什么不同？<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">传统的web前端与后端的交互中，浏览器直接访问Tomcat的Servlet来获取数据。<strong style="box-sizing:border-box;font-weight:bold;">Servlet通过转发把数据发送给浏览器</strong>。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">当我们使用AJAX之后</strong>，浏览器是先把请求发送到XMLHttpRequest异步对象之中，异步对象对请求进行封装，然后再与发送给服务器。<strong style="box-sizing:border-box;font-weight:bold;">服务器并不是以转发的方式响应，而是以流的方式把数据返回给浏览器</strong>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">XMLHttpRequest异步对象会不停监听服务器状态的变化，得到服务器返回的数据，就写到浏览器上【因为不是转发的方式，所以是无刷新就能够获取服务器端的数据】</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="Ajax2_files/1460000013286991" type="image/jpeg" data-filename="1460000013286991" height="439" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="800"/></span></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">请介绍一下XMLhttprequest对象</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>请介绍一下XMLhttprequest对象<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;">Ajax的核心是JavaScript对象XmlHttpRequest。该对象在Internet Explorer 5中首次引入，它是一种支持异步请求的技术。简而言之，<strong style="box-sizing:border-box;font-weight:bold;">XmlHttpRequest使您可以使用JavaScript向服务器提出请求并处理响应，而不阻塞用户。通过XMLHttpRequest对象，Web开发人员可以在页面加载以后进行页面的局部更新</strong></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">介绍一下XMLHttpRequest对象的常用方法和属性</h2>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;"><strong style="box-sizing:border-box;font-weight:bold;">方法</strong></h3>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<strong style="box-sizing:border-box;font-weight:bold;">open()</strong>(<strong style="box-sizing:border-box;font-weight:bold;">String method,String url,boolean asynch</strong>,String username,String password)</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">send(content)</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">setRequestHeader(String header,String value)</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">getAllResponseHeaders()</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">getResponseHeader(String header)</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">abort()</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">常用的方法就是黑色粗体的前三个</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;"><strong style="box-sizing:border-box;font-weight:bold;">open()：该方法创建http请求</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">第一个参数是指定提交方式(post、get)</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">第二个参数是指定要提交的地址是哪</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">第三个参数是指定是异步还是同步(true表示异步，false表示同步)</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">第四和第五参数在http认证的时候会用到。是可选的</li>
+</ul>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;"><strong style="box-sizing:border-box;font-weight:bold;">setRequestHeader(String header,String value)：设置消息头（使用post方式才会使用到，get方法并不需要调用该方法）</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">xmlhttp.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</strong></li></ul>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;"><strong style="box-sizing:border-box;font-weight:bold;">send(content)：发送请求给服务器</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">如果是get方式，并不需要填写参数，或填写null</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">如果是post方式，把要提交的参数写上去</strong></li>
+</ul>
+</li>
+</ul>
+<h3 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.25em;font-size:1.5em;margin:1.5em 0px 0px;"><strong style="box-sizing:border-box;font-weight:bold;">属性</strong></h3>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">onreadystatechange：请求状态改变的事件触发器（readyState变化时会调用此方法），一般用于指定回调函数</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">
+<p style="box-sizing:border-box;margin:0px;margin-top:0px;"><strong style="box-sizing:border-box;font-weight:bold;">readyState：请求状态readyState一改变，回调函数被调用，它有5个状态</strong></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-top:0px;margin-bottom:0px;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">0：未初始化</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">1：open方法成功调用以后</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">2：服务器已经应答客户端的请求</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">3：交互中。Http头信息已经接收，响应数据尚未接收。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">4：完成。数据接收完成</strong></li>
+</ul>
+</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="Ajax2_files/1460000013286992" type="image/jpeg" data-filename="1460000013286992" height="439" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="800"/></span></p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">responseText：服务器返回的文本内容</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">responseXML：服务器返回的兼容DOM的XML内容</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">status：服务器返回的状态码</strong></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">statusText：服务器返回状态码的文本信息</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">上面有两个地方都提及了回调函数，回调函数是什么？？</p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">回调函数就是<strong style="box-sizing:border-box;font-weight:bold;">接收服务器返回的内容！</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><span style="box-sizing:border-box;display:block;text-align:center;"><img src="Ajax2_files/1460000013286993" type="image/jpeg" data-filename="1460000013286993" height="439" style="box-sizing:border-box;vertical-align:middle;border:1px solid rgb(221, 221, 221);max-width:100%;padding:3px;position:static;cursor:pointer;display:inline;" title="这里写图片描述" width="800"/></span></p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">Ajax的实现流程是怎样的？</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>Ajax的实现流程是怎样的？<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">(2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">(3)设置响应HTTP请求状态变化的函数.</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">(4)发送HTTP请求.</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">(5)获取异步调用返回的数据.</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">(6)使用JavaScript和DOM实现局部刷新.</li>
+</ul>
+<pre style="word-wrap:break-word;overflow-x:auto;border-radius:4px;box-sizing:border-box;display:block;color:rgb(51, 51, 51);font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;word-break:break-all;line-height:1.45;margin:1.5em 0px;padding:1em;border:none;font-size:0.93em;max-height:35em;position:relative;background:url(https://static.segmentfault.com/v-5b8f9b7e/global/css/../img/blueprint.png) 0% 0% / 30px rgb(246, 246, 246), 0% 0% / 30px;overflow:auto;margin-top:0px;"><code style="box-sizing:border-box;font-family:&quot;Source Code Pro&quot;, Consolas, Menlo, Monaco, &quot;Courier New&quot;, monospace;padding:0px;color:inherit;border-radius:0px;font-size:1em;white-space:inherit;background:none;overflow-wrap:normal;">
+
+
+    &lt;script type=<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;text/javascript&quot;</span>&gt;
+
+        <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> httpRequest;
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">function</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">checkUsername</span>(<span style="box-sizing:border-box;"></span>) </span>{
+
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span>(<span style="box-sizing:border-box;color:rgb(0, 134, 179);">window</span>.XMLHttpRequest) {
+
+                <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//在IE6以上的版本以及其他内核的浏览器(Mozilla)等</span>
+                httpRequest = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> XMLHttpRequest();
+            }<span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">else</span> <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span>(<span style="box-sizing:border-box;color:rgb(0, 134, 179);">window</span>.ActiveXObject) {
+
+                <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//在IE6以下的版本</span>
+                httpRequest = <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">new</span> ActiveXObject();
+            }
+
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//创建http请求</span>
+            httpRequest.open(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;POST&quot;</span>, <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Servlet1&quot;</span>, <span style="box-sizing:border-box;color:rgb(0, 128, 128);">true</span>);
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//因为我使用的是post方式，所以需要设置消息头</span>
+            httpRequest.setRequestHeader(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;Content-type&quot;</span>, <span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;application/x-www-form-urlencoded&quot;</span>);
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//指定回调函数</span>
+            httpRequest.onreadystatechange = response22;
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到文本框的数据</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> name = <span style="box-sizing:border-box;color:rgb(0, 134, 179);">document</span>.getElementById(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;username&quot;</span>).value;
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//发送http请求，把要检测的用户名传递进去</span>
+            httpRequest.send(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;username=&quot;</span> + name);
+
+        }
+
+        <span style="box-sizing:border-box;"><span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">function</span> <span style="box-sizing:border-box;color:rgb(153, 0, 0);font-weight:bold;">response22</span>(<span style="box-sizing:border-box;"></span>) </span>{
+
+            <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//判断请求状态码是否是4【数据接收完成】</span>
+            <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span>(httpRequest.readyState==<span style="box-sizing:border-box;color:rgb(0, 128, 128);">4</span>) {
+
+                <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//再判断状态码是否为200【200是成功的】</span>
+                <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">if</span>(httpRequest.status==<span style="box-sizing:border-box;color:rgb(0, 128, 128);">200</span>) {
+
+                    <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//得到服务端返回的文本数据</span>
+                    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> text = httpRequest.responseText;
+
+                    <span style="box-sizing:border-box;font-style:italic;color:rgb(153, 153, 136);">//把服务端返回的数据写在div上</span>
+                    <span style="box-sizing:border-box;color:rgb(51, 51, 51);font-weight:bold;">var</span> div = <span style="box-sizing:border-box;color:rgb(0, 134, 179);">document</span>.getElementById(<span style="box-sizing:border-box;color:rgb(221, 17, 68);">&quot;result&quot;</span>);
+                    div.innerText = text;
+                }
+
+            }
+        }
+    &lt;<span style="box-sizing:border-box;color:rgb(0, 153, 38);">/script&gt;
+</span></code></pre>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">AJAX请求总共有多少种CALLBACK</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>AJAX请求总共有多少种CALLBACK<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;">Ajax请求总共有<strong style="box-sizing:border-box;font-weight:bold;">八种</strong>Callback</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">onSuccess</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onFailure</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onUninitialized</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onLoading</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onLoaded</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onInteractive</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onComplete</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">onException</li>
+</ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">XMLHttpRequest对象在IE和Firefox中创建方式有没有不同。</h2>
+<p style="box-sizing:border-box;margin:1.5em 0px;">有，IE中通过new ActiveXObject()得到，Firefox中通过newXMLHttpRequest()得到</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">当然了，我们一般使用jquery封装好的ajax方法，那就没有那么麻烦了。</strong></li></ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">AJAX有哪些有点和缺点？</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>AJAX有哪些有点和缺点？<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;">优点：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">1、最大的一点是页面无刷新，用户的体验非常好。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">2、使用异步方式与服务器通信，具有更加迅速的响应能力。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">3、可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">4、基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">缺点：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">1、ajax不支持浏览器back按钮。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">2、安全问题 AJAX暴露了与服务器交互的细节。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">3、对搜索引擎的支持比较弱。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">4、破坏了程序的异常机制。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">5、不容易调试。</li>
+</ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">请解释一下 JavaScript 的同源策略。</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>请解释一下 JavaScript 的同源策略。<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;">同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。所谓同源指的是：协议，域名，端口相同，<strong style="box-sizing:border-box;font-weight:bold;">同源策略是一种安全协议，指一段脚本只能读取来自同一来源的窗口和文档的属性</strong>。</p>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">阐述一下异步加载JS。</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>阐述一下异步加载JS。<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<ol style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">异步加载的方案： 动态插入 script 标签</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">通过 ajax 去获取 js 代码，然后通过 eval 执行</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">script 标签上添加 defer 或者 async 属性</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">创建并插入 iframe，让它异步执行 js</li>
+</ol>
+<p style="box-sizing:border-box;margin:1.5em 0px;">参考资料：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;"><a href="https://www.cnblogs.com/zichi/p/4597766.html" rel="nofollow noreferrer" style="box-sizing:border-box;background:transparent;color:rgb(0, 154, 97);text-decoration:none;outline:0px;border-bottom:1px solid rgba(0, 154, 97, 0.25);padding-bottom:1px;" target="_blank">https://www.cnblogs.com/zichi/p/4597766.html</a></li>
+<li style="box-sizing:border-box;margin:0.3em 0px;"><a href="https://www.cnblogs.com/xkloveme/articles/7569426.html" rel="nofollow noreferrer" style="box-sizing:border-box;background:transparent;color:rgb(0, 154, 97);text-decoration:none;outline:0px;border-bottom:1px solid rgba(0, 154, 97, 0.25);padding-bottom:1px;" target="_blank">https://www.cnblogs.com/xkloveme/articles/7569426.html</a></li>
+</ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">如何解决跨域问题?</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>如何解决跨域问题?<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<p style="box-sizing:border-box;margin:1.5em 0px;"><strong style="box-sizing:border-box;font-weight:bold;">理解跨域的概念：协议、域名、端口都相同才同域，否则都是跨域</strong></p>
+<p style="box-sizing:border-box;margin:1.5em 0px;">出于安全考虑，服务器不允许ajax跨域获取数据，但是可以跨域获取文件内容。</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">所以基于这一点，可以动态创建script标签，使用标签的src属性访问js文件的形式获取js脚本，并且这个js脚本中的内容是函数调用，该函数调用的参数是服务器返回的数据，为了获取这里的参数数据，需要事先在页面中定义回调函数，在回调函数中处理服务器返回的数据，<strong style="box-sizing:border-box;font-weight:bold;">【JSONP】</strong>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">在后端上配置可跨域<strong style="box-sizing:border-box;font-weight:bold;">【CORS方式】</strong>
+</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">前端ajax请求的是本地接口，本地接口接收到请求后向实际的接口请求数据，然后再将信息返回给前端<strong style="box-sizing:border-box;font-weight:bold;">【代理方式】</strong>
+</li>
+</ul>
+<p style="box-sizing:border-box;margin:1.5em 0px;">AJAX跨域的问题可参考：</p>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><a href="https://segmentfault.com/a/1190000012469713" rel="nofollow noreferrer" style="box-sizing:border-box;background:transparent;color:rgb(0, 154, 97);text-decoration:none;outline:0px;border-bottom:1px solid rgba(0, 154, 97, 0.25);padding-bottom:1px;">https://segmentfault.com/a/1190000012469713</a></li></ul>
+<h2 style="box-sizing:border-box;font-family:inherit;font-weight:500;color:inherit;line-height:1.5em;font-size:1.75em;margin:1.5em 0px 0px;border-bottom:1px solid rgb(238, 238, 238);padding-bottom:10px;">Ajax 解决浏览器缓存问题？</h2>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>Ajax 解决浏览器缓存问题？<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;">
+<li style="box-sizing:border-box;margin:0.3em 0px;">1、在ajax发送请求前加上 anyAjaxObj.setRequestHeader(&quot;If-Modified-Since&quot;,&quot;0&quot;)。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">2、在ajax发送请求前加上 anyAjaxObj.setRequestHeader(&quot;Cache-Control&quot;,&quot;no-cache&quot;)。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">3、在URL后面加上一个随机数： &quot;fresh=&quot; + Math.random();。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">4、在URL后面加上时间戳：&quot;nowtime=&quot; + new Date().getTime();。</li>
+<li style="box-sizing:border-box;margin:0.3em 0px;">5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。</li>
+</ul>
+<ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;"><li style="box-sizing:border-box;margin:0.3em 0px;"><ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-bottom:0px;margin-top:0px;"><li style="box-sizing:border-box;margin:0.3em 0px;"><ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-bottom:0px;margin-top:0px;"><li style="box-sizing:border-box;margin:0.3em 0px;"><ul style="box-sizing:border-box;margin:1.5em 0px;padding-left:0px;margin-left:3em;margin-bottom:0px;margin-top:0px;"><li style="box-sizing:border-box;margin:0.3em 0px;">--</li></ul></li></ul></li></ul></li></ul>
+<blockquote style="box-sizing:border-box;padding:10px 20px;margin:1.5em 0px;font-size:1em;border-left:2px solid rgb(0, 154, 97);background:rgb(246, 246, 246);color:rgb(85, 85, 85);"><span style="font-size:1em;color:rgb(85, 85, 85);"></span>如果文章有错的地方欢迎指正，大家互相交流。习惯在微信看技术文章的同学，<strong style="box-sizing:border-box;font-weight:bold;">可以关注微信公众号:Java3y</strong>
+<span style="font-size:1em;color:rgb(85, 85, 85);"></span></blockquote>
+
+                <span style="line-height:1.6;font-size:15px;font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif;display:table;clear:both;"> </span></div></div></div></div></div></div></div></div>
+</div>
+</span>
+</div></body></html> 
